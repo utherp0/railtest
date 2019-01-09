@@ -1,0 +1,14 @@
+metadata:
+  labels:
+    uther: test
+spec:
+  template:
+    spec:
+      containers:
+        -
+          env:
+          - name: TOKEN
+            valueFrom:
+              secretKeyRef:
+                key: token
+                name: darwincredssecret
